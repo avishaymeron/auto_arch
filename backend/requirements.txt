@@ -1,0 +1,10 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+PyMuPDF==1.23.7  # For PDF processing
+numpy==1.26.2    # For numerical operations
+pydantic==2.5.2  # For data validation
+pytest==7.4.3    # For testing
+python-jose==3.3.0  # For JWT tokens
+passlib==1.7.4   # For password hashing
+python-dotenv==1.0.0

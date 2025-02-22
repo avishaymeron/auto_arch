@@ -1,0 +1,142 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+  padding: 10px;
+  overflow: hidden; /* Prevent scrolling on the container */
+  box-sizing: border-box; /* Makes padding part of the element's total width/height */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.logo2 {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  overflow: hidden; /* Prevent main content from scrolling */
+  height: calc(100vh - 150px); /* Subtract header height + padding + margins */
+  box-sizing: border-box;
+}
+
+.left-panel {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden; /* Prevent scrolling on the container */
+  height: 100%; /* Take full height of main-content */
+}
+
+.frame {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0px;
+  flex: 1;
+  overflow: auto;
+}
+
+.toc-frame {
+  min-height: 300px;
+  flex: 1;
+}
+
+.data-table-frame {
+  min-height: 300px;
+  flex: 1;
+  
+}
+
+.viewer-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative; /* For measurements positioning */
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.viewer {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: auto; /* THIS enables scrolling within the PDF viewer only */
+  max-height: 100%; /* Ensure it doesn't exceed parent container */
+  box-sizing: border-box;
+}
+
+.measurements {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: auto; /* THIS is the key - allow PDF viewer to scroll independently */
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 0px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
